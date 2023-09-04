@@ -7,18 +7,24 @@ package manga.collect.viewmodels;
  */
 public class MangaDescriptionViewModel {
 
-	private String imgUrl;
-	private String isbn;
-	private String title;
-	private String name;
+	private final String isbn;
+	private final String title;
+	private final String yearParutionVf;
+	private final String imgUrl;
 
 	public MangaDescriptionViewModel(){
-		this("", "");
+		this("", "","", "");
 	}
 
 	public MangaDescriptionViewModel(final String title, final String isbn){
+		this(title, isbn, "", "");
+	}
+
+	public MangaDescriptionViewModel(final String title, final String isbn, final String imgUrl, final String yearParutionVf) {
 		this.title = title;
 		this.isbn = isbn;
+		this.imgUrl = imgUrl;
+		this.yearParutionVf = yearParutionVf;
 	}
 
 	public String getIsbn() {
@@ -27,5 +33,13 @@ public class MangaDescriptionViewModel {
 
 	public String getTitle() {
 		return title;
+	}
+
+	public String getImgUrl() {
+		return imgUrl;
+	}
+
+	public String getYearParutionVf() {
+		return yearParutionVf;
 	}
 }

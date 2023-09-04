@@ -7,7 +7,9 @@ import javafx.application.Application;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+import manga.collect.infrastructures.IMangaRepository;
 import manga.collect.presenters.*;
+import manga.collect.repositories.FakeMangaRepository;
 import manga.collect.views.*;
 
 import java.util.List;
@@ -45,6 +47,7 @@ public class App extends Application {
      * @return  Retourne une nouvelle MainWindow avec une Session et un Repository.
      */
     private static MainWindow getMainWindow() {
+        final IMangaRepository repository = new FakeMangaRepository();
         return new MainWindow(
                 new HBox(),
                 new MenuView(ViewName.MENU_VIEW,
@@ -95,7 +98,7 @@ public class App extends Application {
                 ),
                 new HomeView(
                         ViewName.HOME_VIEW,
-                        new HomePresenter()
+                        new HomePresenter(repository)
                 ),
                 new MangaView(
                         ViewName.MANGA_VIEW,
