@@ -12,7 +12,7 @@ public class FakeMangaRepository implements IMangaRepository {
     private final List<Manga> _mangas = new ArrayList<Manga>();
 
     public FakeMangaRepository() {
-        
+
     }
 
     @Override
