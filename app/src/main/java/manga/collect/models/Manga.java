@@ -15,20 +15,27 @@ public class Manga {
 	private final ParutionInformations parutionInformations;
 	private final CollectionInformations collectionInformations;
 	private final String synopsis;
+	private final String imageUrl;
 	private final StaffInformation staffInformation;
 
     public Manga(
 			TitlesInformations titlesInformations,
 			ParutionInformations parutionInformations,
 			CollectionInformations collectionInformations,
-			String theSynopsis,
+			String synopsis,
+			final String imageUrl,
 			StaffInformation staffInformation) {
 		this.titlesInformations = titlesInformations;
 		this.parutionInformations = parutionInformations;
 		this.collectionInformations = collectionInformations;
-		this.synopsis = theSynopsis;
+		this.synopsis = synopsis;
+		this.imageUrl = imageUrl;
 		this.staffInformation = staffInformation;
     }
+
+	public String getImageUrl() {
+		return imageUrl;
+	}
 
 	public TitlesInformations getTitlesInformations() {
 		return titlesInformations;

@@ -39,6 +39,7 @@ public class FakeMangaRepository implements IMangaRepository {
                                 "Test Collection"
                         ),
                         "Test Synopsis",
+                        getClass().getResource("/img/placeholder/placeholder.jpg").toString(),
                         new StaffInformation(
                                 "Test Designer",
                                 "Test Illustrator",
@@ -56,7 +57,9 @@ public class FakeMangaRepository implements IMangaRepository {
 
     @Override
     public Manga getMangaByIsbn(String isbn) {
-        return this._mangas.get(0);
+        return this._mangas
+                .stream()
+                .filter(manga -> manga.getTitlesInformations().getTitle().equals(isbn)).findFirst().orElse(null);
     }
 
     @Override

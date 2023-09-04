@@ -15,11 +15,11 @@ import manga.collect.viewmodels.MangaViewModel;
 public class MangaView extends View implements IMangaView {
 	private final IMangaPresenter presenter;
 
-	private final Label isbnLbl = new Label();
+	private final Label titleLbl = new Label();
 
 	private final VBox infoContainer = new VBox(); {
 		infoContainer.getChildren().addAll(
-				isbnLbl
+				titleLbl
 		);
 	}
 
@@ -40,7 +40,7 @@ public class MangaView extends View implements IMangaView {
 	 * @param informations
 	 */
 	public void setMangaInformation(MangaViewModel informations){
-		isbnLbl.setText(informations.getIsbn());
+		titleLbl.setText(informations.getTitle());
 	}
 
 	@Override

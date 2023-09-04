@@ -16,6 +16,14 @@ public class GoToArgs {
         filterValue.putAll(filters);
     }
 
+    public boolean hasKey(String key) {
+        return filterValue.containsKey(key);
+    }
+
+    public String get(String key) {
+        return filterValue.get(key);
+    }
+
     public String getValue() {
         return filterValue.get(filterValue.firstKey());
     }

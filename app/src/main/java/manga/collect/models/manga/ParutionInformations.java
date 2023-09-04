@@ -9,12 +9,12 @@ public class ParutionInformations {
     private final String voEditor;
 
     public ParutionInformations(
-            int vfParutionYear,
-            int voParutionYear,
-            String vfParutionCountry,
-            String voParutionCountry,
-            String vfEditor,
-            String voEditor) {
+            final int vfParutionYear,
+            final int voParutionYear,
+            final String vfParutionCountry,
+            final String voParutionCountry,
+            final String vfEditor,
+            final String voEditor) {
         this.vfParutionYear = vfParutionYear;
         this.voParutionYear = voParutionYear;
         this.vfParutionCountry = vfParutionCountry;

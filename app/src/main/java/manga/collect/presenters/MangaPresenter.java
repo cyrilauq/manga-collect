@@ -1,11 +1,18 @@
 package manga.collect.presenters;
 
+import manga.collect.infrastructures.IMangaRepository;
+import manga.collect.models.Manga;
 import manga.collect.viewmodels.MangaViewModel;
 import manga.collect.views.IMangaView;
 
 public class MangaPresenter implements IMangaPresenter {
 
     private IMangaView view;
+    private final IMangaRepository repository;
+
+    public MangaPresenter(IMangaRepository repository) {
+        this.repository = repository;
+    }
 
     @Override
     public void onEnter(ViewName from) {
@@ -19,9 +26,11 @@ public class MangaPresenter implements IMangaPresenter {
 
     @Override
     public void onEnter(ViewName from, GoToArgs args) {
+        final Manga manga = repository.getMangaByIsbn(args.get("title"));
         this.view.setMangaInformation(
                 new MangaViewModel(
-                        "123456789"
+                    manga.getTitlesInformations().getTitle(),
+                    ""
                 )
         );
     }

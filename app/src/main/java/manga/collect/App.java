@@ -102,7 +102,7 @@ public class App extends Application {
                 ),
                 new MangaView(
                         ViewName.MANGA_VIEW,
-                        new MangaPresenter()
+                        new MangaPresenter(repository)
                 ),
                 new SearchView(
                         ViewName.SEARCH_MANGA_VIEW,

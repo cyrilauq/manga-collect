@@ -20,12 +20,12 @@ public class HomePresenter implements IHomePresenter {
     }
 
     @Override
-    public void seeManga(String isbn) {
+    public void seeManga(String title) {
         view.goTo(
                 ViewName.MANGA_VIEW,
                 new GoToArgs(
-                        "isbn",
-                        isbn
+                        "title",
+                        title
                 )
         );
     }
@@ -77,7 +77,7 @@ public class HomePresenter implements IHomePresenter {
         return new MangaDescriptionViewModel(
                     mangaTitles.getTitle(),
                     "123456789",
-                    "",
+                    manga.getImageUrl(),
                     String.valueOf(parutionInformations.getVfParutionYear())
                 );
     }

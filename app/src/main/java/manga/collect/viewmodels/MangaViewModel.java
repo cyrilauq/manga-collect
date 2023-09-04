@@ -7,16 +7,26 @@ package manga.collect.viewmodels;
  */
 public class MangaViewModel {
 	private final String isbn;
+	private final String title;
 
 	public MangaViewModel(){
 		this("");
 	}
 
 	public MangaViewModel(final String isbn) {
+		this("", "");
+	}
+
+	public MangaViewModel(final String title, final String isbn) {
 		this.isbn = isbn;
+		this.title = title;
 	}
 
 	public String getIsbn() {
 		return isbn;
+	}
+
+	public String getTitle() {
+		return title;
 	}
 }

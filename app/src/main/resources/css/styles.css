@@ -10,3 +10,7 @@
     -fx-pref-width: 650px;
     -fx-alignment: center;
 }
+
+.vignette {
+    -fx-border-radius: 25px;
+}

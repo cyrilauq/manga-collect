@@ -1,4 +1,4 @@
 package manga.collect.infrastructures;
 
-public class ITomeRepository {
+public interface ITomeRepository {
 }

@@ -32,6 +32,7 @@ public class MangaTest {
                         "The collection"
                 ),
                 "The synopsis",
+                "",
                 new StaffInformation(
                         "The designer",
                         "The illustrator",
