@@ -59,7 +59,9 @@ public class FakeMangaRepository implements IMangaRepository {
     public Manga getMangaByIsbn(String isbn) {
         return this._mangas
                 .stream()
-                .filter(manga -> manga.getTitlesInformations().getTitle().equals(isbn)).findFirst().orElse(null);
+                .filter(manga -> manga.getTitlesInformations().getTitle().equals(isbn))
+                .findFirst()
+                .orElse(null);
     }
 
     @Override

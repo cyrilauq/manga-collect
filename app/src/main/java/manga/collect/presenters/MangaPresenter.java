@@ -30,7 +30,15 @@ public class MangaPresenter implements IMangaPresenter {
         this.view.setMangaInformation(
                 new MangaViewModel(
                     manga.getTitlesInformations().getTitle(),
-                    ""
+                    "",
+                    String.valueOf(manga.getParutionInformations().getVfParutionYear()),
+                    String.valueOf(manga.getParutionInformations().getVoParutionYear()),
+                    manga.getParutionInformations().getVfParutionCountry(),
+                    manga.getParutionInformations().getVoParutionCountry(),
+                    manga.getParutionInformations().getVfEditor(),
+                    manga.getParutionInformations().getVoEditor(),
+                    manga.getSynopsis(),
+                    manga.getImageUrl()
                 )
         );
     }
