@@ -1,0 +1,12 @@
+.homeMangaView {
+    -fx-pref-width: 150px;
+    -fx-pref-height: 220px;
+    -fx-padding: 15px, 15px, 15px, 15px;
+    -fx-background-color: grey;
+    -fx-background-radius: 25px;
+}
+
+.mangasContainer {
+    -fx-pref-width: 650px;
+    -fx-alignment: center;
+}
